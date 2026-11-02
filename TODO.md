@@ -116,7 +116,7 @@
 - Make the visible ABIZK wordmarks blink randomly, character by character, throughout the portfolio.
 - Keep the flicker subtle and legible, and respect reduced-motion preferences by disabling it.
 
-## Portfolio-focused GitHub README — in progress
+## Portfolio-focused GitHub README — complete (published in `d423fd0df804feb99916a7fb3e2fce81771b7141`)
 - Rewrite the project-root README for ABIZK’s personal creative portfolio rather than documenting the software stack or developer setup.
 - Describe only confirmed About, creative services, featured work, process, tools and contact details.
 
