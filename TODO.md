@@ -107,7 +107,7 @@
 ## Continuously rotating aim square — complete (10-second infinite animation confirmed)
 - Keep the shooting-aim cursor following pointer movement and rotate the square around the aim continuously in a loop until the page is left.
 
-## Connected GitHub Portfolio repository — in progress
+## Connected GitHub Portfolio repository — complete (source commit: `ff9108335d5edf5a80d734bfd4cb72248dcaa099`)
 - Push and commit the entire ABIZK project into the user's connected GitHub repository named `Portfolio`.
 - Ensure the current website About section and project-root README are included and accurate; update the GitHub repository About description to match the confirmed creative portfolio scope.
 - Include the four original uploads in `client/public/media/` as `abizk-profile.jpeg`, `poster-01-leofarewell.webp`, `poster-02-messi.webp` and `featured-video.mp4`; update the asset mappings to those repository paths so the GitHub project is self-contained.
