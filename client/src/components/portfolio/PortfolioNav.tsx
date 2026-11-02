@@ -11,7 +11,11 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function PortfolioNav() {
+interface PortfolioNavProps {
+  isOpening?: boolean;
+}
+
+export default function PortfolioNav({ isOpening = false }: PortfolioNavProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -26,10 +30,24 @@ export default function PortfolioNav() {
 
   return (
     <header className="nav-frame">
-      <nav className={`site-nav${menuOpen ? " is-open" : ""}`} aria-label="Main navigation">
+      <nav
+        className={`site-nav${menuOpen ? " is-open" : ""}${isOpening ? " is-opening" : ""}`}
+        aria-label="Main navigation"
+      >
         <a className="brand-lockup" href="#home" onClick={closeMenu} aria-label="ABIZK home">
-          <img className="profile-image" src={portfolioAssets.profilePhoto} alt="Profile photo of ABIZK" />
-          <span className="brand-name"><BrandFlicker /></span>
+          <span className={`profile-photo-entry${isOpening ? " is-opening" : ""}`}>
+            <img className="profile-image" src={portfolioAssets.profilePhoto} alt="Profile photo of ABIZK" />
+          </span>
+          <span className="brand-name">
+            <span className="brand-name-final" aria-hidden={isOpening}>
+              <BrandFlicker />
+            </span>
+            {isOpening && (
+              <span className="opening-welcome" aria-hidden="true">
+                Welcome to my portfolio
+              </span>
+            )}
+          </span>
         </a>
 
         <div className="nav-links" id="primary-navigation">

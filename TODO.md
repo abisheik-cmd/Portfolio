@@ -120,5 +120,12 @@
 - Rewrite the project-root README for ABIZK’s personal creative portfolio rather than documenting the software stack or developer setup.
 - Describe only confirmed About, creative services, featured work, process, tools and contact details.
 
+## Opening profile and welcome animation — complete
+- On portfolio open, slide the profile photo from right to left until it reaches its existing position in the top-left.
+- Animate “Welcome to my portfolio” alongside the photo, then dissolve it with a Gaussian-blur-out effect.
+- Fade the portfolio contents in while the photo is moving; show a glow ring around the photo only during its animation.
+- Preserve the existing background color and layout; add only the opening animation.
+- Respect reduced-motion preferences by presenting the existing layout without the opening motion.
+
 ## Delivery status
 The four supplied originals—profile, Poster 01, Poster 02 and video—are bundled in `client/public/media/`, referenced through local paths in `portfolioAssets.ts`, and verified byte-for-byte against the provided uploads. The video uses a custom, no-autoplay player with exactly two controls: one Play/Pause toggle and one mute/unmute toggle; native controls, picture-in-picture, remote playback and the media context menu are disabled. The Made to Move section lists Motion Graphics, Video Editing and Graphic Design. The About copy identifies ABIZK as a creative editor and designer working across video editing, motion graphics and graphic design, with no unverified biography. TypeScript and the static production build pass, and the build output contains all four original media files. The Preview server responds on the configured port, and `/manus-routes.json` returns the expected home route. The site has not been published.

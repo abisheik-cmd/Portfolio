@@ -3150,6 +3150,152 @@ footer {
   }
 }
 
+/* The opening sequence animates existing content in place; the page canvas is unchanged. */
+.profile-photo-entry {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  flex: 0 0 auto;
+  overflow: visible;
+  transform-origin: center;
+}
+
+.profile-photo-entry.is-opening {
+  animation: portfolio-profile-arrive 1.65s cubic-bezier(0.2, 0.68, 0.28, 1) both;
+}
+
+.profile-photo-entry .profile-image {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-photo-entry.is-opening::after {
+  position: absolute;
+  z-index: 1;
+  inset: -7px;
+  border: 1px solid rgba(49, 91, 255, 0.82);
+  border-radius: 50%;
+  box-shadow: 0 0 13px rgba(49, 91, 255, 0.58), 0 0 27px rgba(49, 91, 255, 0.3);
+  content: "";
+  pointer-events: none;
+  animation: portfolio-profile-glow 1.65s ease-out both;
+}
+
+.site-nav .brand-name {
+  position: relative;
+}
+
+.brand-name-final {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 260ms ease-out;
+}
+
+.site-nav.is-opening .brand-name-final {
+  opacity: 0;
+}
+
+.opening-welcome {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 0;
+  color: inherit;
+  font-family: var(--sans);
+  font-size: clamp(12px, 1.15vw, 14px);
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: portfolio-welcome-arrive-and-dissolve 1.85s cubic-bezier(0.2, 0.68, 0.28, 1) 120ms both;
+}
+
+.site-nav.is-opening .nav-links,
+.site-nav.is-opening .nav-cta,
+.site-nav.is-opening .nav-toggle {
+  animation: portfolio-opening-fade 760ms ease-out 340ms both;
+}
+
+#root .portfolio-page.is-opening .reveal-block.is-visible {
+  animation: portfolio-opening-fade 840ms ease-out 340ms both;
+}
+
+@keyframes portfolio-profile-arrive {
+  0% {
+    opacity: 0.24;
+    transform: translate3d(105vw, 0, 0) scale(0.88);
+  }
+  22% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes portfolio-profile-glow {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.74);
+  }
+  34% {
+    opacity: 0.95;
+    filter: blur(0);
+    transform: scale(1.06);
+  }
+  72% {
+    opacity: 0.62;
+    filter: blur(1px);
+    transform: scale(1.16);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(1.28);
+  }
+}
+
+@keyframes portfolio-welcome-arrive-and-dissolve {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translate3d(105vw, -50%, 0);
+  }
+  14% {
+    opacity: 0.45;
+  }
+  45% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  79% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, -50%, 0);
+  }
+  87% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(16px);
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes portfolio-opening-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .wiggle-char,
   #root .portfolio-page .tool-item,
@@ -3166,6 +3312,35 @@ footer {
 
   #root .portfolio-page .process-list {
     scroll-behavior: auto !important;
+  }
+
+  .profile-photo-entry.is-opening,
+  .site-nav.is-opening .nav-links,
+  .site-nav.is-opening .nav-cta,
+  .site-nav.is-opening .nav-toggle,
+  #root .portfolio-page.is-opening .reveal-block.is-visible {
+    animation: none !important;
+  }
+
+  .profile-photo-entry.is-opening {
+    opacity: 1;
+    transform: none;
+  }
+
+  .profile-photo-entry.is-opening::after,
+  .opening-welcome {
+    display: none !important;
+    animation: none !important;
+  }
+
+  .site-nav.is-opening .brand-name-final,
+  .site-nav.is-opening .nav-links,
+  .site-nav.is-opening .nav-cta,
+  .site-nav.is-opening .nav-toggle,
+  #root .portfolio-page.is-opening .reveal-block.is-visible {
+    opacity: 1 !important;
+    filter: none !important;
+    transition: none !important;
   }
 }
 
