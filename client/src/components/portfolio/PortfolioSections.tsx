@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { portfolioAssets } from "./portfolioAssets";
+import { BrandFlicker } from "./BrandFlicker";
 import { MinimalVideoPlayer } from "./MinimalVideoPlayer";
 
 function WiggleText({ text, offset = 0 }: { text: string; offset?: number }) {
@@ -33,7 +34,7 @@ export function Hero() {
   return (
     <section className="hero section-shell" id="home" aria-labelledby="hero-title">
       <div className="hero-title-wrap">
-        <h1 className="hero-wordmark" id="hero-title" aria-label="ABIZK."><WiggleText text="ABIZK" /><span className="hero-period" aria-hidden="true">.</span></h1>
+        <h1 className="hero-wordmark" id="hero-title" aria-label="ABIZK."><BrandFlicker wiggle /><span className="hero-period" aria-hidden="true">.</span></h1>
         <aside className="hero-about-aside" id="about" aria-labelledby="about-title">
           <h2 id="about-title">A clear idea.<br /><span>A visual point of view.</span></h2>
           <div className="hero-about-copy">
@@ -237,7 +238,7 @@ export function Contact() {
           </div>
           <div className="pricing-note"><p>Every project has its own recipe. Pricing is determined by creative complexity, production requirements, editing time and delivery expectations.</p></div>
         </div>
-        <div className="footer-signoff"><a href="#home" className="footer-wordmark">ABIZK<span>.</span></a></div>
+        <div className="footer-signoff"><a href="#home" className="footer-wordmark" aria-label="ABIZK home"><BrandFlicker /><span className="footer-period" aria-hidden="true">.</span></a></div>
       </div>
     </footer>
   );

@@ -1271,7 +1271,7 @@ footer {
   letter-spacing: -0.055em;
 }
 
-.footer-wordmark span {
+.footer-wordmark > .footer-period {
   color: #7890ff;
 }
 
@@ -2905,6 +2905,15 @@ footer {
   9.6% { transform: translateY(0) rotate(0deg); }
 }
 
+.brand-flicker-ink {
+  transition: opacity 75ms ease-out, filter 75ms ease-out;
+}
+
+.brand-flicker-ink.is-flickering {
+  opacity: 0.12;
+  filter: blur(0.35px) brightness(1.25);
+}
+
 #root .portfolio-page .tool-list {
   display: grid;
   align-self: stretch;
@@ -3146,6 +3155,13 @@ footer {
   #root .portfolio-page .tool-item,
   .aim-cursor-rotating-square {
     animation: none !important;
+  }
+
+  .brand-flicker-ink,
+  .brand-flicker-ink.is-flickering {
+    opacity: 1 !important;
+    filter: none !important;
+    transition: none !important;
   }
 
   #root .portfolio-page .process-list {

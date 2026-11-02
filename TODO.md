@@ -112,5 +112,9 @@
 - Ensure the current website About section and project-root README are included and accurate; update the GitHub repository About description to match the confirmed creative portfolio scope.
 - Include the four original uploads in `client/public/media/` as `abizk-profile.jpeg`, `poster-01-leofarewell.webp`, `poster-02-messi.webp` and `featured-video.mp4`; update the asset mappings to those repository paths so the GitHub project is self-contained.
 
+## Randomized ABIZK wordmark flicker — complete (all five character positions observed across three wordmarks in Preview)
+- Make the visible ABIZK wordmarks blink randomly, character by character, throughout the portfolio.
+- Keep the flicker subtle and legible, and respect reduced-motion preferences by disabling it.
+
 ## Delivery status
 The four supplied originals—profile, Poster 01, Poster 02 and video—are bundled in `client/public/media/`, referenced through local paths in `portfolioAssets.ts`, and verified byte-for-byte against the provided uploads. The video uses a custom, no-autoplay player with exactly two controls: one Play/Pause toggle and one mute/unmute toggle; native controls, picture-in-picture, remote playback and the media context menu are disabled. The Made to Move section lists Motion Graphics, Video Editing and Graphic Design. The About copy identifies ABIZK as a creative editor and designer working across video editing, motion graphics and graphic design, with no unverified biography. TypeScript and the static production build pass, and the build output contains all four original media files. The Preview server responds on the configured port, and `/manus-routes.json` returns the expected home route. The site has not been published.

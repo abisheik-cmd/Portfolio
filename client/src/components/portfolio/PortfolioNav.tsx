@@ -1,5 +1,6 @@
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { BrandFlicker } from "./BrandFlicker";
 import { portfolioAssets } from "./portfolioAssets";
 
 const links = [
@@ -28,7 +29,7 @@ export default function PortfolioNav() {
       <nav className={`site-nav${menuOpen ? " is-open" : ""}`} aria-label="Main navigation">
         <a className="brand-lockup" href="#home" onClick={closeMenu} aria-label="ABIZK home">
           <img className="profile-image" src={portfolioAssets.profilePhoto} alt="Profile photo of ABIZK" />
-          <span className="brand-name">ABIZK</span>
+          <span className="brand-name"><BrandFlicker /></span>
         </a>
 
         <div className="nav-links" id="primary-navigation">
