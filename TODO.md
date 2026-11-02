@@ -116,5 +116,9 @@
 - Make the visible ABIZK wordmarks blink randomly, character by character, throughout the portfolio.
 - Keep the flicker subtle and legible, and respect reduced-motion preferences by disabling it.
 
+## Portfolio-focused GitHub README — in progress
+- Rewrite the project-root README for ABIZK’s personal creative portfolio rather than documenting the software stack or developer setup.
+- Describe only confirmed About, creative services, featured work, process, tools and contact details.
+
 ## Delivery status
 The four supplied originals—profile, Poster 01, Poster 02 and video—are bundled in `client/public/media/`, referenced through local paths in `portfolioAssets.ts`, and verified byte-for-byte against the provided uploads. The video uses a custom, no-autoplay player with exactly two controls: one Play/Pause toggle and one mute/unmute toggle; native controls, picture-in-picture, remote playback and the media context menu are disabled. The Made to Move section lists Motion Graphics, Video Editing and Graphic Design. The About copy identifies ABIZK as a creative editor and designer working across video editing, motion graphics and graphic design, with no unverified biography. TypeScript and the static production build pass, and the build output contains all four original media files. The Preview server responds on the configured port, and `/manus-routes.json` returns the expected home route. The site has not been published.

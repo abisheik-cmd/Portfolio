@@ -1,48 +1,42 @@
 # ABIZK — Creative Portfolio
 
-A responsive, single-page portfolio for ABIZK, a creative editor and designer working across video editing, motion graphics and graphic design. The homepage places the About statement beside the ABIZK wordmark and presents original user-supplied poster and video work in an editorial, neo-brutalist visual system.
+### Creative Editor & Designer
 
-## Built with
+**A clear idea. A visual point of view.**
 
-- React 19, TypeScript and Wouter
-- Vite for development and static production builds
-- Tailwind CSS with the visual system in `client/src/index.css`
-- Lucide React icons
+Transforming ideas into impactful visuals through editing, motion and design.
 
-The current website is a static frontend with no application database or customer-facing backend flow.
+## About
 
-## Original media
+I’m ABIZK, a creative editor and designer working across video editing, motion graphics and graphic design. I bring those disciplines together to give each idea a clear visual direction.
 
-The four original user uploads are included in `client/public/media/` and mapped in `client/src/components/portfolio/portfolioAssets.ts`:
+## What I Do
 
-- `abizk-profile.jpeg` — profile photo
-- `poster-01-leofarewell.webp` — featured poster 01
-- `poster-02-messi.webp` — featured poster 02
-- `featured-video.mp4` — original 10-second 1080p H.264/AAC video
+- **Video Editing** — Shape the story with rhythm, pacing and a thoughtful cut.
+- **Motion Graphics** — Give type and form a pulse through considered motion.
+- **Graphic Design** — Build a clear visual language from image, type and layout.
 
-The site uses these original files directly; no generated or unrelated stock imagery replaces the supplied portfolio work. The video remains user-started and uses the custom Play/Pause and Mute/Unmute controls.
+## Selected Work
 
-## Local development
+The portfolio brings together two poster designs and a featured video piece. The poster work explores football and Messi-inspired visuals, while the video highlights ABIZK’s editing and motion sensibility. The featured work uses original portfolio media supplied by ABIZK.
 
-```bash
-pnpm install --frozen-lockfile
-pnpm dev:static
-```
+## Creative Process
 
-The Vite server listens on `PORT` when set, otherwise on port `3000`.
+1. **Got an idea?** Bring the vision. Let’s figure out the recipe.
+2. **Prep the concept.** Plan the ingredients before production begins.
+3. **Let’s cook.** Edit, design and animate the vision.
+4. **Serve the final cut.** Polish the visuals and prepare them to make an impression.
+5. **Got another recipe?** Let’s cook something new together.
 
-## Project scripts
+## Creative Toolkit
 
-- `pnpm dev:static` — start the frontend development server.
-- `pnpm build:static` — build the deployable frontend into `dist/public/`.
-- `pnpm check` — run the TypeScript check.
-- `pnpm test` — run the configured Vitest suite.
+- Adobe After Effects
+- Adobe Premiere Pro
+- Adobe Photoshop
 
-The package also retains server and database scripts, but they are not used by the current static portfolio.
+## Contact
 
-## Main source files
+For project inquiries:
 
-- `client/src/components/portfolio/PortfolioSections.tsx` — homepage, About copy, featured work, services, Recipe slider and contact sections.
-- `client/src/components/portfolio/MinimalVideoPlayer.tsx` — accessible player with only Play/Pause and Mute/Unmute controls.
-- `client/src/components/portfolio/portfolioAssets.ts` — centralized paths for the supplied profile, posters and video.
-- `client/src/index.css` — palette, typography, responsive layout and interaction styling.
+- **Email:** [abizk0306@gmail.com](mailto:abizk0306@gmail.com)
+- **Instagram:** [@abizk.ae](https://www.instagram.com/abizk.ae/)
